@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         guard let drawable = metal_layer.nextDrawable() else { return }
         render_pd.colorAttachments[0].texture = drawable.texture
         render_pd.colorAttachments[0].loadAction = .clear
-        render_pd.colorAttachments[0].clearColor = MTLClearColor(red: 221.0/255.0, green: 160.0/255.0, blue: 221.0/255.0, alpha: 1.0)
+        render_pd.colorAttachments[0].clearColor = MTLClearColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         let command_buf = command_queue.makeCommandBuffer()
         let render_encoder = command_buf?.makeRenderCommandEncoder(descriptor: render_pd)
         render_encoder?.setRenderPipelineState(pipe_line_state)
